@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="95" fill="#020c1b" />
+  
+  <!-- Code Brackets -->
+  <path d="M60 70 L40 100 L60 130" stroke="#64ffda" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M140 70 L160 100 L140 130" stroke="#64ffda" stroke-width="8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Stoic Column -->
+  <rect x="90" y="60" width="20" height="80" fill="#64ffda" opacity="0.8"/>
+  
+  <!-- Infinity Symbol (representing continuous learning) -->
+  <path d="M70 140 C70 120 90 120 100 140 C110 160 130 160 130 140 C130 120 110 120 100 140 C90 160 70 160 70 140Z" 
+        fill="none" 
+        stroke="#64ffda" 
+        stroke-width="6"
+        opacity="0.9"/>
+  
+  <!-- Letter Z -->
+  <path d="M85 75 L115 75 L85 105 L115 105" 
+        stroke="#64ffda" 
+        stroke-width="6" 
+        fill="none" 
+        stroke-linecap="round"
+        opacity="0.95"/>
+</svg>

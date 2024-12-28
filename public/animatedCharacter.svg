@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes glow {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+    @keyframes type {
+      0% { width: 0; }
+      100% { width: 80px; }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes blink {
+      0%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(0.1); }
+    }
+    .character {
+      animation: float 4s ease-in-out infinite;
+    }
+    .glow {
+      animation: glow 2s ease-in-out infinite;
+    }
+    .typing {
+      animation: type 1.5s steps(12) infinite;
+    }
+    .name {
+      animation: fadeIn 2s ease-out forwards;
+    }
+    .eye {
+      animation: blink 4s infinite;
+    }
+  </style>
+  
+  <!-- Background Square -->
+  <rect x="0" y="0" width="300" height="300" fill="#020c1b"/>
+  
+  <!-- Main Character -->
+  <g class="character" transform="translate(0, 20)">
+    <!-- Abstract Face -->
+    <g transform="translate(150, 125)">
+      <!-- Face Outline -->
+      <path d="M-30 -30 L30 -30 L30 30 L-30 30 Z" 
+            fill="none" 
+            stroke="#64ffda" 
+            stroke-width="2"
+            opacity="0.6"/>
+      
+      <!-- Eyes -->
+      <g class="eye">
+        <line x1="-15" y1="-5" x2="-5" y2="-5" stroke="#64ffda" stroke-width="2"/>
+        <line x1="5" y1="-5" x2="15" y2="-5" stroke="#64ffda" stroke-width="2"/>
+      </g>
+      
+      <!-- Abstract Features -->
+      <path d="M-10 10 L0 15 L10 10" 
+            fill="none" 
+            stroke="#64ffda" 
+            stroke-width="2"
+            stroke-linecap="round"/>
+      
+      <!-- Geometric Details -->
+      <path d="M-25 -25 L-20 -20 M25 -25 L20 -20" 
+            stroke="#64ffda" 
+            stroke-width="1"
+            opacity="0.6"/>
+    </g>
+
+    <!-- Connected Framework -->
+    <path d="M100 100 L150 70 L200 100 L200 150 L150 180 L100 150 Z" 
+          fill="none" 
+          stroke="#64ffda" 
+          stroke-width="3"/>
+    
+    <!-- Connected Nodes -->
+    <circle cx="150" cy="70" r="4" fill="#64ffda" class="glow"/>
+    <circle cx="200" cy="100" r="4" fill="#64ffda" class="glow"/>
+    <circle cx="200" cy="150" r="4" fill="#64ffda" class="glow"/>
+    <circle cx="150" cy="180" r="4" fill="#64ffda" class="glow"/>
+    <circle cx="100" cy="150" r="4" fill="#64ffda" class="glow"/>
+    <circle cx="100" cy="100" r="4" fill="#64ffda" class="glow"/>
+    
+    <!-- Tech Stack Circles -->
+    <g transform="translate(0, -10)">
+      <circle cx="90" cy="125" r="15" fill="#64ffda" opacity="0.2"/>
+      <text x="90" cy="130" text-anchor="middle" fill="#64ffda" font-size="12">JS</text>
+      
+      <circle cx="210" cy="125" r="15" fill="#64ffda" opacity="0.2"/>
+      <text x="210" cy="130" text-anchor="middle" fill="#64ffda" font-size="12">TS</text>
+    </g>
+  </g>
+
+  <!-- DAIFI Name -->
+  <g class="name" transform="translate(0, -30)">
+    <!-- Name Background -->
+    <rect x="100" y="230" width="100" height="30" fill="#64ffda" opacity="0.1" rx="4"/>
+    <!-- Name Text -->
+    <text x="150" y="250" text-anchor="middle" fill="#64ffda" font-family="monospace" font-size="16" font-weight="bold">
+      DAIFI
+    </text>
+  </g>
+
+  <!-- Code Elements -->
+  <g transform="translate(70, 200)">
+    <rect x="0" y="0" width="80" height="2" fill="#64ffda" class="typing"/>
+    <rect x="0" y="15" width="160" height="2" fill="#64ffda" opacity="0.6"/>
+    <rect x="0" y="30" width="120" height="2" fill="#64ffda" opacity="0.4"/>
+  </g>
+
+  <!-- Bottom Decorative Elements -->
+  <g transform="translate(0, 20)">
+    <!-- Left Column -->
+    <rect x="60" y="220" width="10" height="40" fill="#64ffda" opacity="0.3"/>
+    <path d="M55 260 L75 260 L70 270 L60 270 Z" fill="#64ffda" opacity="0.3"/>
+    
+    <!-- Right Column -->
+    <rect x="230" y="220" width="10" height="40" fill="#64ffda" opacity="0.3"/>
+    <path d="M225 260 L245 260 L240 270 L230 270 Z" fill="#64ffda" opacity="0.3"/>
+  </g>
+</svg>
