@@ -1,9 +1,47 @@
 "use client";
-import Image from "next/image";
-import { useEffect } from "react";
-import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
+import { motion } from "framer-motion";
+import BlogSection from "./components/BlogSection/BlogSection";
 import IntroSection from "./components/IntroSection/IntroSection";
-import AnimatedBackground from "./components/IntroSection/AnimatedBackground";
+import { fadeIn } from "./components/motions";
+import AnimatedNavbar from "./components/NavBar";
+import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
+import SkillsSection from "./components/SkillsSection/SkillsSection";
+import SocialLinks from "./components/SocialLinks";
+
+const projects = [
+  {
+    id: 1,
+    title: "Project One",
+    description:
+      "A brief overview of Project One. Highlight its purpose, features, and tech stack.",
+    github: "https://github.com/username/project-one",
+    preview: "http://localhost:3000/irc.jpeg",
+    tech: ["React", "Node.js", "MongoDB"],
+    image: "http://localhost:3000/irc.jpeg",
+  },
+  {
+    id: 2,
+    title: "Project Two",
+    description:
+      "A brief overview of Project Two. Include notable achievements and functionality.",
+    github: "https://github.com/username/project-two",
+    preview:
+      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
+    tech: ["Next.js", "TypeScript", "PostgreSQL"],
+    image: "/3.jpeg",
+  },
+  {
+    id: 3,
+    title: "Project Three",
+    description:
+      "Highlight the purpose and functionality of Project Three here. Highlight the purpose and functionality of Project Three here.",
+    github: "https://github.com/username/project-three",
+    preview:
+      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
+    tech: ["NestJS", "Docker", "AWS"],
+    image: "/4.jpeg",
+  },
+];
 
 export default function Home() {
   const scrollToSection = (sectionId: string) => {
@@ -14,55 +52,21 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-[#0A1932] text-gray-100">
       {/* Nav bar */}
-      <nav className="fixed top-0 z-50 w-full backdrop-blur-md bg-[#0A1932]/90 border-b border-[#64ffda]/10">
-        <div className="flex items-center justify-between max-w-6xl mx-auto px-6 h-20">
-          <div className="flex items-center space-x-2 hover:scale-105 transition-transform">
-            <button
-              onClick={() => scrollToSection("intro")}
-              className="group flex items-center space-x-1 font-mono text-sm hover:-translate-y-0.5 transition-transform"
-            >
-              <Image
-                src="/logo.svg"
-                alt="logo"
-                width={40}
-                height={40}
-                objectFit="cover"
-              />
-              <p className="text-xl font-mono font-bold group-hover:text-[#00bfa5] transition-colors text-[#C1D8D3]">
-                Zenøn
-              </p>
-            </button>
-          </div>
-          <div className="flex space-x-8">
-            {[
-              { id: "about", num: "1" },
-              { id: "projects", num: "2" },
-              { id: "contact", num: "3" },
-            ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="group flex items-center space-x-1 font-mono text-sm hover:-translate-y-0.5 transition-transform"
-              >
-                <span className="text-[#64ffda] group-hover:text-[#00bfa5]">
-                  {item.num}.
-                </span>
-                <span className="text-gray-300 group-hover:text-[#64ffda] transition-colors">
-                  {item.id.charAt(0).toUpperCase() + item.id.slice(1)}
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </nav>
+      <AnimatedNavbar />
+
+      <SocialLinks />
 
       {/* Main content */}
-      <main className="flex-1 pt-20">
+      <main className="flex-1 pt-20 max-w-6xl justify-center items-center mx-auto">
         {/* Introduction */}
         <IntroSection />
 
-        <section
+        <motion.section
           id="about"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn("up")}
           className="min-h-screen flex items-center px-6 py-20 max-w-6xl mx-auto"
         >
           <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -109,14 +113,25 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-
+        </motion.section>
         {/* Projects */}
-        <ProjectsSection />
+
+        <ProjectsSection projects={projects} />
+
+        {/* Skills */}
+        <SkillsSection />
+
+        {/* Blog */}
+
+        <BlogSection />
 
         {/* Contact */}
-        <section
+        <motion.section
           id="contact"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn("up")}
           className="min-h-screen flex items-center px-6 py-20 max-w-6xl mx-auto"
         >
           <div className="w-full max-w-2xl mx-auto text-center space-y-8">
@@ -136,7 +151,7 @@ export default function Home() {
               Say Hello
             </a>
           </div>
-        </section>
+        </motion.section>
       </main>
 
       <style jsx>{`
@@ -205,9 +220,41 @@ export default function Home() {
       `}</style>
 
       {/* Footer */}
-      <footer className="py-6 text-center text-gray-400 font-mono text-sm border-t border-[#64ffda]/10">
-        <p>Built with Next.js by Zenon</p>
-        <p>© 2024 All rights reserved</p>
+      <footer className="py-8 bg-[#0a192f] text-gray-400 font-mono text-sm border-t border-[#64ffda]/20">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="mb-2">
+            Crafted with purpose and perseverance by{" "}
+            <span className="text-[#64ffda]">Zenon</span>
+          </p>
+          <p className="italic mb-4">
+            "Amor Fati – Embrace the code and the challenges it brings."
+          </p>
+          <div className="flex justify-center space-x-4 mb-4">
+            <a
+              href="https://github.com/zenon0777/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#64ffda]"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abderrahmane-daifi-2170721b8/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#64ffda]"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto:abderrahmane.daifi@protonmail.com"
+              className="hover:text-[#64ffda]"
+            >
+              Contact
+            </a>
+          </div>
+          <p>© 2024 Zenon. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );
