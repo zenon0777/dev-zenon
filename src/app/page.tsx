@@ -21,24 +21,36 @@ const projects = [
   },
   {
     id: 2,
-    title: "Project Two",
+    title: "End-to-End DevOps Solution with Kubernetes for a Mid-Sized Enterprise",
     description:
-      "A brief overview of Project Two. Include notable achievements and functionality.",
-    github: "https://github.com/username/project-two",
+      "designed and deployed a complete DevOps solution for a mid-sized enterprise,\
+       using Kubernetes (k3s), CI/CD pipelines, Terraform for IaC, and automated testing. \
+       This setup improved operational efficiency and minimized deployment risks. \
+       I provisioned infrastructure on DigitalOcean with Terraform, built a Jenkins pipeline for automated tests, \
+       and implemented ArgoCD for continuous delivery. Kubernetes ensured scalability, high availability, and resilience, enabling faster, \
+       more reliable deployments and consistent infrastructure management.",
     preview:
-      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
-    tech: ["Next.js", "TypeScript", "PostgreSQL"],
-    image: "/3.jpeg",
+      "./project-2.png",
+    tech: ["Kubernetes", "Terraform", "Jenkins", "ArgoCD", "DigitalOcean", "K3s", "K3D"],
+    image: "./project-2.png",
   },
   {
     id: 3,
-    title: "Project Three",
+    title: "Cloud one",
     description:
-      "Highlight the purpose and functionality of Project Three here. Highlight the purpose and functionality of Project Three here.",
+      "Developed a fully automated cloud infrastructure solution using Terraform on DigitalOcean, \
+      implementing Infrastructure as Code principles to orchestrate multiple containerized services. \
+      The infrastructure provisions and manages a WordPress CMS, static website hosting, PHPMyAdmin, and MariaDB database, \
+      all served through an Nginx reverse proxy with SSL termination.\n\
+      The architecture emphasizes security and monitoring, with each service running in isolated Docker containers orchestrated via Docker Compose. \
+      The deployment includes a comprehensive monitoring stack using Prometheus for metrics collection and Grafana for visualization dashboards, \
+      ensuring real- time performance tracking and system health monitoring.The entire setup features automated deployment, \
+      persistent storage for databases and WordPress content, and secure communication between services, demonstrating practical \
+      application of DevOps practices and cloud platform management skills.",
     github: "https://github.com/username/project-three",
     preview:
       "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
-    tech: ["NestJS", "Docker", "AWS"],
+    tech: ["Terraform", "Docker", "Nginx", "Prometheus", "Grafana", "DigitalOcean", "WordPress", "PHPMyAdmin", "MariaDB", "DevOps"],
     image: "/4.jpeg",
   },
 ];

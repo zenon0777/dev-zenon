@@ -22,7 +22,7 @@ const blogPosts: BlogPost[] = [
     date: "Mar 15, 2024",
     readTime: "8 min read",
     imageUrl: "/1.svg",
-    mediumUrl: "https://medium.com/@yourusername/article-1",
+    mediumUrl: "https://zenon0777.medium.com//article-1",
     tags: ["Next.js", "TypeScript", "Web Development"],
   },
   {
@@ -32,7 +32,7 @@ const blogPosts: BlogPost[] = [
     date: "Feb 28, 2024",
     readTime: "12 min read",
     imageUrl: "/1.svg",
-    mediumUrl: "https://medium.com/@yourusername/article-2",
+    mediumUrl: "https://zenon0777.medium.com//article-2",
     tags: ["NestJS", "Microservices", "Backend"],
   },
   {
@@ -42,7 +42,7 @@ const blogPosts: BlogPost[] = [
     date: "Jan 20, 2024",
     readTime: "10 min read",
     imageUrl: "/1.svg",
-    mediumUrl: "https://medium.com/@yourusername/article-3",
+    mediumUrl: "https://zenon0777.medium.com//article-3",
     tags: ["React", "State Management", "Frontend"],
   },
 ];
@@ -139,7 +139,7 @@ const BlogSection = () => {
 
         <motion.div variants={fadeIn("up")} className="text-center">
           <a
-            href="https://medium.com/@yourusername"
+            href="https://zenon0777.medium.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#64ffda] text-[#64ffda] rounded-lg hover:bg-[#64ffda]/10 transition-colors duration-300"
