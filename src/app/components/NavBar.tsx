@@ -19,18 +19,6 @@ const AnimatedNavbar = () => {
     });
   }, [scrollY]);
 
-  // Close mobile menu when window is resized to desktop size
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024 && isOpen) {
-        setIsOpen(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [isOpen]);
-
   const navVariants = {
     visible: { y: 0 },
     hidden: { y: "-100%" },
@@ -113,7 +101,6 @@ const AnimatedNavbar = () => {
                 alt="logo"
                 width={40}
                 height={40}
-                objectFit="cover"
               />
             </motion.div>
             <p className="text-xl font-mono font-bold group-hover:text-[#00bfa5] transition-colors text-[#C1D8D3]">

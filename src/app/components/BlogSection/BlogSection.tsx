@@ -2,6 +2,7 @@
 import { fadeIn, hoverScale, staggerContainer } from "@/app/components/motions";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 interface BlogPost {
   title: string;
@@ -13,7 +14,6 @@ interface BlogPost {
   tags: string[];
 }
 
-// Sample blog posts - replace with your actual Medium posts
 const blogPosts: BlogPost[] = [
   {
     title: "Building Scalable Applications with Next.js and TypeScript",
@@ -48,7 +48,7 @@ const blogPosts: BlogPost[] = [
 ];
 
 const BlogCard = ({ post }: { post: BlogPost }) => {
-  const [ref, inView] = useInView({
+  const [ref] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
@@ -64,11 +64,16 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
       className="block bg-gray-800/50 rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl hover:shadow-[#64ffda]/10"
     >
       <div className="relative">
-        <img
-          src={post.imageUrl}
-          alt={post.title}
-          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-        />
+        <div className="relative w-full h-48">
+          <Image
+            src={post.imageUrl}
+            alt={post.title}
+            width={200}
+            height={200}
+            className="transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
       </div>
 

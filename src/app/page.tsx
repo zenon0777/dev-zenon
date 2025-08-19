@@ -7,21 +7,22 @@ import AnimatedNavbar from "./components/NavBar";
 import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
 import SkillsSection from "./components/SkillsSection/SkillsSection";
 import SocialLinks from "./components/SocialLinks";
+import Image from "next/image";
 
 const projects = [
   {
     id: 1,
-    title: "Project One",
+    title: "Matcha: A Modern Approach to Online Dating",
     description:
-      "A brief overview of Project One. Highlight its purpose, features, and tech stack.",
-    github: "https://github.com/username/project-one",
-    preview: "http://localhost:3000/irc.jpeg",
-    tech: ["React", "Node.js", "MongoDB"],
+      "A fully responsive dating web app featuring user authentication (OAuth included), profile matching, real-time messaging, video calls (WebRTC), advanced filters, map integration, and a date scheduler. Built with raw SQL queries for optimized performance.",
+    github: "https://github.com/1337Impact/42-matcha",
+    tech: ["React.js", "Node.js", "PostgreSQL", "WebSockets", "WebRTC"],
     image: "http://localhost:3000/irc.jpeg",
   },
   {
     id: 2,
-    title: "End-to-End DevOps Solution with Kubernetes for a Mid-Sized Enterprise",
+    title:
+      "End-to-End DevOps Solution with Kubernetes for a Mid-Sized Enterprise",
     description:
       "designed and deployed a complete DevOps solution for a mid-sized enterprise,\
        using Kubernetes (k3s), CI/CD pipelines, Terraform for IaC, and automated testing. \
@@ -29,10 +30,18 @@ const projects = [
        I provisioned infrastructure on DigitalOcean with Terraform, built a Jenkins pipeline for automated tests, \
        and implemented ArgoCD for continuous delivery. Kubernetes ensured scalability, high availability, and resilience, enabling faster, \
        more reliable deployments and consistent infrastructure management.",
-    preview:
-      "./project-2.png",
-    tech: ["Kubernetes", "Terraform", "Jenkins", "ArgoCD", "DigitalOcean", "K3s", "K3D"],
-    image: "./project-2.png",
+    github: "https://github.com/username/devops-solution",
+    preview: "/project-2.png",
+    tech: [
+      "Kubernetes",
+      "Terraform",
+      "Jenkins",
+      "ArgoCD",
+      "DigitalOcean",
+      "K3s",
+      "K3D",
+    ],
+    image: "/project-2.png",
   },
   {
     id: 3,
@@ -50,27 +59,31 @@ const projects = [
     github: "https://github.com/username/project-three",
     preview:
       "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
-    tech: ["Terraform", "Docker", "Nginx", "Prometheus", "Grafana", "DigitalOcean", "WordPress", "PHPMyAdmin", "MariaDB", "DevOps"],
+    tech: [
+      "Terraform",
+      "Docker",
+      "Nginx",
+      "Prometheus",
+      "Grafana",
+      "DigitalOcean",
+      "WordPress",
+      "PHPMyAdmin",
+      "MariaDB",
+      "DevOps",
+    ],
     image: "/4.jpeg",
   },
 ];
 
 export default function Home() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div className="flex flex-col min-h-screen bg-[#0A1932] text-gray-100">
-      {/* Nav bar */}
       <AnimatedNavbar />
 
       <SocialLinks />
 
-      {/* Main content */}
       <main className="flex-1 pt-20 max-w-6xl justify-center items-center mx-auto">
-        {/* Introduction */}
         <IntroSection />
 
         <motion.section
@@ -102,12 +115,12 @@ export default function Home() {
                 </p>
                 <p>
                   In addition to my development skills, I have a growing passion
-                  for DevOps methodologies. I'm adept at containerization using
+                  for DevOps methodologies. I&apos;m adept at containerization using
                   Docker, orchestrating CI/CD pipelines, and leveraging cloud
                   platforms to optimize application deployment and performance.
                 </p>
                 <p>
-                  When I'm not coding, you will find me exploring new tools,
+                  When I&apos;m not coding, you will find me exploring new tools,
                   deepening my understanding of IT architecture, or sharing
                   knowledge with the developer community. I thrive on challenges
                   that push me to learn, adapt, and grow.
@@ -117,27 +130,26 @@ export default function Home() {
             <div className="lg:w-1/2 flex justify-center">
               <div className="relative group w-full max-w-sm">
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#64ffda]/30 via-transparent to-[#0A1932] rounded-lg blur-xl group-hover:blur-lg transition duration-500" />
-                <img
-                  src="/animatedCharacter.svg"
-                  alt="Animated Character"
-                  className="w-full max-w-sm transform group-hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
-                />
+                <div className="relative w-full max-w-sm h-auto aspect-square">
+                  <Image
+                    src="/animatedCharacter.svg"
+                    alt="Animated Character"
+                    width={200}
+                    height={200}
+                    className="transform group-hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </motion.section>
-        {/* Projects */}
 
         <ProjectsSection projects={projects} />
 
-        {/* Skills */}
         <SkillsSection />
-
-        {/* Blog */}
 
         <BlogSection />
 
-        {/* Contact */}
         <motion.section
           id="contact"
           initial="hidden"
@@ -152,8 +164,8 @@ export default function Home() {
               Get In Touch
             </h2>
             <p className="text-gray-400">
-              I'm currently looking for new opportunities. Whether you have a
-              question or just want to say hi, I'll try my best to get back to
+              I&apos;m currently looking for new opportunities. Whether you have a
+              question or just want to say hi, I&apos;ll try my best to get back to
               you!
             </p>
             <a
@@ -239,7 +251,7 @@ export default function Home() {
             <span className="text-[#64ffda]">Zenon</span>
           </p>
           <p className="italic mb-4">
-            "Amor Fati – Embrace the code and the challenges it brings."
+            &quot;Amor Fati – Embrace the code and the challenges it brings.&quot;
           </p>
           <div className="flex justify-center space-x-4 mb-4">
             <a
