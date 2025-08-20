@@ -12,29 +12,41 @@ import Image from "next/image";
 const projects = [
   {
     id: 1,
-    title: "Matcha: A Modern Approach to Online Dating",
-    description:
-      "A fully responsive dating web app featuring user authentication (OAuth included), profile matching, real-time messaging, video calls (WebRTC), advanced filters, map integration, and a date scheduler. Built with raw SQL queries for optimized performance.",
-    github: "https://github.com/1337Impact/42-matcha",
-    tech: ["React.js", "Node.js", "PostgreSQL", "WebSockets", "WebRTC"],
-    image: "http://localhost:3000/irc.jpeg",
+    title: "MedinaGo",
+    description: `Developed a modern web application leveraging AI for cultural exploration. Features include a real-time audio guide, intelligent location-based navigation, and curated content, all accessed via a responsive UI.
+     Built using Next.js, React, Radix UI, and FastAPI with OpenAI integration.`,
+    github: "https://github.com/1337Impact/MEDNIA-HERITAGE",
+    tech: ["Next.js", "React", "Radix UI", "FastAPI", "OpenAI"],
+    image: "/madina-go-1.png",
   },
   {
     id: 2,
+    title: "Z-tube: Modern Full-Stack Movie Streaming Platform",
+    description: "Developed a modern, responsive, full-stack movie streaming platform, HyperTube, \
+    enabling users to browse, search, and stream movies directly in their browser via an integrated torrent client. \
+    Leveraged Next.js and TypeScript for a dynamic frontend experience, and Django with PostgreSQL for a robust backend. \
+    Features include user authentication, watchlists, comments, ratings, and seamless integration with TMDB and YTS APIs. \
+    Demonstrated skills in full-stack development, \
+    API integration, real-time streaming concepts, and containerized deployment using Docker.",
+    github: "https://github.com/zenon0777/HyperTube",
+    tech: ["Next.js 15", "TypeScript", "Redux Toolkit", "React Query", "Material-UI", "Tailwind CSS", "Framer Motion",
+      "Django 5.1", "Django REST Framework", "PostgreSQL", "JWT Authentication", "Celery", "Docker", "Nginx", "AWS S3"],
+    image: "/z-tube-1.png",
+  },
+  {
+    id: 3,
     title:
       "End-to-End DevOps Solution with Kubernetes for a Mid-Sized Enterprise",
     description:
-      "designed and deployed a complete DevOps solution for a mid-sized enterprise,\
-       using Kubernetes (k3s), CI/CD pipelines, Terraform for IaC, and automated testing. \
-       This setup improved operational efficiency and minimized deployment risks. \
-       I provisioned infrastructure on DigitalOcean with Terraform, built a Jenkins pipeline for automated tests, \
-       and implemented ArgoCD for continuous delivery. Kubernetes ensured scalability, high availability, and resilience, enabling faster, \
-       more reliable deployments and consistent infrastructure management.",
-    github: "https://github.com/username/devops-solution",
+      "Infrastructure Automation Showcase. Built a suite of projects to demonstrate\
+      modern DevOps workflows, including setting up K3s Kubernetes clusters, deploying multi-application stacks via Docker and Kubernetes, and managing infrastructure with Vagrant and VirtualBox.\
+      Focuses on container orchestration and Infrastructure as Code.",
+    github: "https://github.com/zenon0777/inceptionOfThings",
     preview: "/project-2.png",
     tech: [
       "Kubernetes",
-      "Terraform",
+      "Vagrant",
+      "VirtualBox",
       "Jenkins",
       "ArgoCD",
       "DigitalOcean",
@@ -44,7 +56,7 @@ const projects = [
     image: "/project-2.png",
   },
   {
-    id: 3,
+    id: 4,
     title: "Cloud one",
     description:
       "Developed a fully automated cloud infrastructure solution using Terraform on DigitalOcean, \
@@ -56,7 +68,7 @@ const projects = [
       ensuring real- time performance tracking and system health monitoring.The entire setup features automated deployment, \
       persistent storage for databases and WordPress content, and secure communication between services, demonstrating practical \
       application of DevOps practices and cloud platform management skills.",
-    github: "https://github.com/username/project-three",
+    github: "git@github.com:zenon0777/Cloud-1.git",
     preview:
       "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
     tech: [
@@ -71,7 +83,7 @@ const projects = [
       "MariaDB",
       "DevOps",
     ],
-    image: "/4.jpeg",
+    image: "/cloudOne.png",
   },
 ];
 

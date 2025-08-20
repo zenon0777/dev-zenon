@@ -38,10 +38,10 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
       viewport={{ once: true, amount: 0.18 }}
       variants={cardVariant}
       whileHover={{ scale: 1.01 }}
-      className="relative grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
+      className="relative grid grid-cols-1 lg:grid-cols-12 gap-4 items-center"
     >
       <div
-        className={`lg:col-span-7 order-1 lg:order-${isEven ? "1" : "2"} relative group`}
+        className={`lg:col-span-6 order-1 lg:order-${isEven ? "1" : "2"} relative group`}
       >
         <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-gradient-to-br from-[#071126] to-[#0f2338] shadow-lg">
           <div className="absolute inset-0 bg-[#64ffda] mix-blend-multiply opacity-20 group-hover:opacity-40 transition-opacity duration-300" />
@@ -59,7 +59,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
       </div>
 
       <div
-        className={`lg:col-span-5 order-2 lg:order-${isEven ? "2" : "1"} lg:relative z-10`}
+        className={`lg:col-span-6 order-2 lg:order-${isEven ? "2" : "1"} lg:relative z-10`}
       >
         <div
           className={`bg-[#0b1a2b]/95 border border-[#153045]/40 p-6 rounded-xl shadow-2xl lg:mr-8 lg:text-left
