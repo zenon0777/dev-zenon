@@ -16,34 +16,14 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
-    title: "Building Scalable Applications with Next.js and TypeScript",
+    title: "From K8s to K3s: A Practical Guide to Lightweight Kubernetes for Edge Computing",
     excerpt:
-      "Learn how to leverage Next.js and TypeScript to create robust, type-safe applications that scale.",
-    date: "Mar 15, 2024",
-    readTime: "8 min read",
-    imageUrl: "/1.svg",
-    mediumUrl: "https://zenon0777.medium.com//article-1",
-    tags: ["Next.js", "TypeScript", "Web Development"],
-  },
-  {
-    title: "Microservices Architecture with NestJS",
-    excerpt:
-      "A deep dive into building microservices using NestJS, including best practices and common pitfalls.",
-    date: "Feb 28, 2024",
-    readTime: "12 min read",
-    imageUrl: "/1.svg",
-    mediumUrl: "https://zenon0777.medium.com//article-2",
-    tags: ["NestJS", "Microservices", "Backend"],
-  },
-  {
-    title: "Modern State Management in React Applications",
-    excerpt:
-      "Exploring different state management solutions in React and when to use each one.",
-    date: "Jan 20, 2024",
-    readTime: "10 min read",
-    imageUrl: "/1.svg",
-    mediumUrl: "https://zenon0777.medium.com//article-3",
-    tags: ["React", "State Management", "Frontend"],
+      "Switching from resource-hungry Kubernetes to the lightweight and efficient K3s for development and edge computing.",
+    date: "Jan 3, 2025",
+    readTime: "4 min read",
+    imageUrl: "/b1.webp",
+    mediumUrl: "https://zenon0777.medium.com/from-k8s-to-k3s-a-practical-guide-to-lightweight-kubernetes-for-edge-computing-b35e39e0579f",
+    tags: ["Kubernetes", "DevOps", "K3S", "K8S", "K3D"],
   },
 ];
 
@@ -68,10 +48,10 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
           <Image
             src={post.imageUrl}
             alt={post.title}
-            width={200}
-            height={200}
+            width={768}
+            height={400}
             className="transition-transform duration-300 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            // sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />

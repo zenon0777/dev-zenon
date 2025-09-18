@@ -91,13 +91,14 @@ export default function EnhancedIntroSection() {
             >
               View Projects
             </motion.button>
-            <motion.button
+            <motion.a
+              href="mailto:abderrahmane.daifi@protonmail.com"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
               className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#64ffda] to-[#00bfa5] text-[#0A1932] rounded-lg hover:opacity-90 transition-colors duration-300 font-medium tracking-wide shadow-lg shadow-[#64ffda]/20 text-sm sm:text-base"
             >
               Get in Touch
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </div>
