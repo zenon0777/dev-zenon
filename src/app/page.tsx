@@ -22,15 +22,31 @@ const projects = [
   {
     id: 2,
     title: "Z-tube: Modern Full-Stack Movie Streaming Platform",
-    description: "Developed a modern, responsive, full-stack movie streaming platform, HyperTube, \
+    description:
+      "Developed a modern, responsive, full-stack movie streaming platform, HyperTube, \
     enabling users to browse, search, and stream movies directly in their browser via an integrated torrent client. \
     Leveraged Next.js and TypeScript for a dynamic frontend experience, and Django with PostgreSQL for a robust backend. \
     Features include user authentication, watchlists, comments, ratings, and seamless integration with TMDB and YTS APIs. \
     Demonstrated skills in full-stack development, \
     API integration, real-time streaming concepts, and containerized deployment using Docker.",
     github: "https://github.com/zenon0777/HyperTube",
-    tech: ["Next.js 15", "TypeScript", "Redux Toolkit", "React Query", "Material-UI", "Tailwind CSS", "Framer Motion",
-      "Django 5.1", "Django REST Framework", "PostgreSQL", "JWT Authentication", "Celery", "Docker", "Nginx", "AWS S3"],
+    tech: [
+      "Next.js 15",
+      "TypeScript",
+      "Redux Toolkit",
+      "React Query",
+      "Material-UI",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Django 5.1",
+      "Django REST Framework",
+      "PostgreSQL",
+      "JWT Authentication",
+      "Celery",
+      "Docker",
+      "Nginx",
+      "AWS S3",
+    ],
     image: "/z-tube-1.png",
   },
   {
@@ -85,10 +101,34 @@ const projects = [
     ],
     image: "/cloudOne.png",
   },
+  {
+    id: 5,
+    title: "TeamShifts",
+    description:
+      "Spearheaded the creation of a new task system, streamlining task management based on priority. " +
+      "Played a pivotal role in refining roles within the system. Leveraging real-time capabilities, edge functions, and RPC, " +
+      "I enhanced the project's efficiency and responsiveness. Applied expertise in SQL to optimize database operations. " +
+      "Additionally, improved the dashboard and agenda interface, enhancing user experience, " +
+      "and effectively managing supplier contacts and business customer relations.",
+    preview: "https://www.teamshifts.com",
+    tech: ["SQL", "Supabase", "Next.js", "Material UI", "Project Management"],
+    image: "/teamshifts-2.png",
+  },
+  {
+    id: 6,
+    title: "Swika",
+    description:
+      "A Moroccan marketplace platform designed for simplicity and efficiency, offering an intuitive interface " +
+      "and a unique 3D map to showcase nearby offers. Its robust filtering system helps users quickly refine searches, " +
+      "enhancing the browsing experience. Swika also features an advanced estimation system that scrapes data from various sources, " +
+      "including government services, to provide accurate property and vehicle price evaluations. " +
+      "Combining accessibility with innovative tools, Swika redefines local commerce for effortless shopping and discovery.",
+    tech: ["Data Scraping", "Node.js", "Supabase", "Next.js", "Mapbox"],
+    image: "/swika.png",
+  },
 ];
 
 export default function Home() {
-
   return (
     <div className="flex flex-col min-h-screen bg-[#0A1932] text-gray-100">
       <AnimatedNavbar />
@@ -127,15 +167,16 @@ export default function Home() {
                 </p>
                 <p>
                   In addition to my development skills, I have a growing passion
-                  for DevOps methodologies. I&apos;m adept at containerization using
-                  Docker, orchestrating CI/CD pipelines, and leveraging cloud
-                  platforms to optimize application deployment and performance.
+                  for DevOps methodologies. I&apos;m adept at containerization
+                  using Docker, orchestrating CI/CD pipelines, and leveraging
+                  cloud platforms to optimize application deployment and
+                  performance.
                 </p>
                 <p>
-                  When I&apos;m not coding, you will find me exploring new tools,
-                  deepening my understanding of IT architecture, or sharing
-                  knowledge with the developer community. I thrive on challenges
-                  that push me to learn, adapt, and grow.
+                  When I&apos;m not coding, you will find me exploring new
+                  tools, deepening my understanding of IT architecture, or
+                  sharing knowledge with the developer community. I thrive on
+                  challenges that push me to learn, adapt, and grow.
                 </p>
               </div>
             </div>
@@ -176,9 +217,9 @@ export default function Home() {
               Get In Touch
             </h2>
             <p className="text-gray-400">
-              I&apos;m currently looking for new opportunities. Whether you have a
-              question or just want to say hi, I&apos;ll try my best to get back to
-              you!
+              I&apos;m currently looking for new opportunities. Whether you have
+              a question or just want to say hi, I&apos;ll try my best to get
+              back to you!
             </p>
             <a
               href="mailto:abderrahmane.daifi@protonmail.com"
@@ -263,7 +304,8 @@ export default function Home() {
             <span className="text-[#64ffda]">Zenon</span>
           </p>
           <p className="italic mb-4">
-            &quot;Amor Fati – Embrace the code and the challenges it brings.&quot;
+            &quot;Amor Fati – Embrace the code and the challenges it
+            brings.&quot;
           </p>
           <div className="flex justify-center space-x-4 mb-4">
             <a
